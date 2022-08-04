@@ -1,9 +1,12 @@
 import user from '../components/Profile/user.json';
 import data from '../components/Statistics/data.json';
 import friends from '../components/FriendList/friends.json';
+import transactions from '../components/TransactionHistory/transactions.json'
 import { Profile } from './Profile/Profile';
 import { Statistics } from './Statistics/Statistics';
 import { FriendList } from './FriendList/FriendList';
+// import { TransactionHistory } from './TransactionHistory/TransactionHistory';
+import TransactionList from './TransactionHistory/TransactionList';
 
 
 export const App = () => {
@@ -19,12 +22,15 @@ export const App = () => {
         views={user.stats.views}
         likes={user.stats.likes}
 />
-          <Statistics title="Upload stats" stats={data} />
+          <Statistics title="Upload stats" 
+          stats={data}
+        
+          />
           <Statistics 
           stats={data}
-          key={data.id}
-          label={data.label}
-          percentage={data.percentage} 
+          // key={data.id}
+         
+          
     />
 
           {/* <FriendList friends ={friends}
@@ -42,7 +48,14 @@ export const App = () => {
             /> 
                 ))} 
        </ul>
-         
+
+
+  <TransactionList items={transactions} />
+
+       
+            
+      
+    
 
 
     </div>
