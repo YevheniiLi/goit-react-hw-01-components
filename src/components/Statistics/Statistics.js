@@ -1,12 +1,12 @@
-export const Statistics = ({title, stats}) => (
+export const Statistics = ({title, stats, label, percentage}) => (
 
     <section class="statistics">
-    <h2 class="title">Upload stats</h2>
+    <h2 class="title">{title} </h2>
 
     <ul class="stat-list">
         <li class="item">
-        <span class="label">.docx</span>
-        <span class="percentage">4%</span>
+        <span class="label">{label}</span>
+        <span class="percentage">{percentage}</span>
         </li>
         <li class="item">
         <span class="label">.mp3</span>

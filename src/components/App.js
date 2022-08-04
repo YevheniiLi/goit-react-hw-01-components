@@ -18,19 +18,24 @@ export const App = () => {
         followers={user.stats.followers}
         views={user.stats.views}
         likes={user.stats.likes}
-        
 />
           <Statistics title="Upload stats" stats={data} />
-          {/* <Statistics stats={data} 
-    /> */}
+          <Statistics 
+          stats={data}
+          key={data.id}
+          label={data.label}
+          percentage={data.percentage} 
+    />
 
           {/* <FriendList friends ={friends}
  />; */}
 
             
         <ul class="friend-list">
-            {friends.map((friend , id) =>(
-            <FriendList key={id} friend ={friend}
+            {friends.map((friend) =>(
+            <FriendList 
+            key={friend.id} 
+            friend ={friend}
             avatar ={friend.avatar}
             name = {friend.name}
             isOnline = {friend.isOnline}
