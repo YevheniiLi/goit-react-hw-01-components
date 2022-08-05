@@ -1,19 +1,23 @@
  import PropTypes  from "prop-types";
+//  import user from './user.json'
  
- export const Profile = ({username, tag, location, avatar, stats, followers, views, likes}) => (
+ export const Profile = ({
+  username, tag, location, avatar, stats: {followers, views, likes},}) => {
+  return (
     <div class="profile">
     <div class="description">
       <img
         src={avatar}
-        alt="User avatar"
+        alt="avatar"
         class="avatar"
+        width="150"
       />
       <p class="name">{username}</p>
       <p class="tag">@{tag}</p>
       <p class="location">{location}</p>
     </div>
   
-    <ul class={stats}>
+    <ul class="stats">
       <li>
         <span class="label">Followers</span>
         <span class="quantity">{followers}</span>
@@ -28,7 +32,10 @@
       </li>
     </ul>
   </div>
-  );
+  )};
+
+
+
 
 Profile.propTypes = {
     username: PropTypes.string.isRequired,
