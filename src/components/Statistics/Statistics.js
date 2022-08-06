@@ -23,7 +23,7 @@ import PropTypes  from "prop-types";
 
 Statistics.propTypes = {
     data: PropTypes.arrayOf(
-        PropTypes.shape ({
+        PropTypes.exact ({
             label: PropTypes.string,
             percentage: PropTypes.number,
             id: PropTypes.string,

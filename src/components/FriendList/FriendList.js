@@ -15,17 +15,29 @@ return (
 export const FriendName = ({friends}) => {
   return (
   <ul className="friend-list">
-  {friends.map((friend) =>(
+  {friends.map(({id, avatar, name, isOnline}) =>(
   <FriendList 
-  key={friend.id} 
-  friend ={friend}
-  avatar ={friend.avatar}
-  name = {friend.name}
-  isOnline = {friend.isOnline}
+  key={id} 
+  avatar ={avatar}
+  name = {name}
+  isOnline = {isOnline}
   /> 
       ))} 
   </ul>
 )}
+
+
+// export const FriendName = ({friends}) => {
+//   return (
+//   <ul className="friend-list">
+//   {friends.map(friend => (
+//   <ul></ul>
+//   ))}
+//   </ul>
+// );
+//   };
+
+
 
 
     FriendName.propTypes = {

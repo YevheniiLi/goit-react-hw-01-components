@@ -1,11 +1,12 @@
  import PropTypes  from "prop-types";
+ import { ProfileAcc, Description, Stats } from "./Profile.styled";
 
  
  export const Profile = ({
   username, tag, location, avatar, stats, followers, views, likes}) => {
   return (
-    <div className="profile">
-    <div className="description">
+    <ProfileAcc >
+    <Description >
       <img
         src={avatar}
         alt="avatar"
@@ -15,9 +16,9 @@
       <p className="name">{username}</p>
       <p className="tag">@{tag}</p>
       <p className="location">{location}</p>
-    </div>
+    </Description>
   
-    <ul className="stats">
+    <Stats className="stats">
       <li>
         <span className="label">Followers</span>
         <span className="quantity">{followers}</span>
@@ -30,8 +31,8 @@
         <span className="label">Likes</span>
         <span className="quantity">{likes}</span>
       </li>
-    </ul>
-  </div>
+    </Stats>
+  </ProfileAcc>
   )};
 
 
@@ -53,13 +54,13 @@
 
 
 ProfileName.propTypes = {
-  user: PropTypes.shape ({
+  user: PropTypes.exact ({
     username: PropTypes.string,
     tag: PropTypes.string,
     location: PropTypes.string,
     avatar: PropTypes.string,
 
-    stats: PropTypes.shape ({
+    stats: PropTypes.exact ({
     followers: PropTypes.number,
     views: PropTypes.number,
     likes: PropTypes.number, 
