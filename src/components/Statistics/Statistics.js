@@ -4,7 +4,7 @@ import PropTypes  from "prop-types";
   return(
       
           <section className="statistics">
-  {title !== undefined && <h2 className="title">{title}</h2>}
+          <h2 className="title">{title}</h2>
 
 <ul>
          {data.map(stat => {
