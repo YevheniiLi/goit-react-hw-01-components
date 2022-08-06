@@ -1,38 +1,41 @@
+ import { Box } from "components/Box";
  import PropTypes  from "prop-types";
- import { ProfileAcc, Description, Stats } from "./Profile.styled";
-
  
+
  export const Profile = ({
   username, tag, location, avatar, stats, followers, views, likes}) => {
   return (
-    <ProfileAcc >
-    <Description >
+    
+      
+    <Box bg='grey'  alignItmes='center' border='1px solid'>
       <img
         src={avatar}
         alt="avatar"
         className="avatar"
         width="150"
       />
-      <p className="name">{username}</p>
-      <p className="tag">@{tag}</p>
-      <p className="location">{location}</p>
-    </Description>
+          <Box>
+            <p>{username}</p>
+            <p>@{tag}</p>
+            <p>{location}</p>
+         </Box>
   
-    <Stats className="stats">
-      <li>
-        <span className="label">Followers</span>
-        <span className="quantity">{followers}</span>
-      </li>
-      <li>
-        <span className="label">Views</span>
-        <span className="quantity">{views}</span>
-      </li>
-      <li>
-        <span className="label">Likes</span>
-        <span className="quantity">{likes}</span>
-      </li>
-    </Stats>
-  </ProfileAcc>
+          <Box as='ul'>
+            <li>
+              <span>Followers</span>
+              <span>{followers}</span>
+            </li>
+            <li>
+              <span>Views</span>
+              <span>{views}</span>
+            </li>
+            <li>
+              <span>Likes</span>
+              <span>{likes}</span>
+            </li>
+          </Box>
+    </Box>
+  
   )};
 
 

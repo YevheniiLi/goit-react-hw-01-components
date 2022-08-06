@@ -1,23 +1,24 @@
 import PropTypes  from "prop-types";
+import { Box } from "components/Box";
 
  export const Statistics = ({title, data}) => {
   return(
       
-          <section className="statistics">
-          <h2 className="title">{title}</h2>
+          <Box as='section'>
+          <h2>{title}</h2>
 
-<ul>
+            <Box>
          {data.map(stat => {
           const {label, percentage,id} = stat;
           return (
-              <li key={id} className='item'>
-                  <span className="label">{label}</span>
-                  <span className="percentage">{percentage}</span>
-              </li>
+              <Box key={id} >
+                  <span>{label}</span>
+                  <span>{percentage}</span>
+              </Box>
           );
          })}
-      </ul>
-      </section>
+            </Box>
+      </Box>
   );
 };
 

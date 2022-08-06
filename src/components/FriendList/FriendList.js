@@ -1,20 +1,21 @@
 import PropTypes  from "prop-types";
+import { Box } from "components/Box";
 
 export const FriendList = ({avatar, name, isOnline}) => {
 return (
-        <li className="item">
-        <span className="status">{isOnline ? 'Онлайн' : 'Офлайн'}</span>
+        <Box >
+        <span>{isOnline ? 'Онлайн' : 'Офлайн'}</span>
         
-        <img className="avatar" src={avatar} alt="User avatar" width="48" />
-        <p className="name">{name}</p>
-        </li>
+        <img src={avatar} alt="User avatar" width="48" />
+        <p>{name}</p>
+        </Box>
 
          
 )};
 
 export const FriendName = ({friends}) => {
   return (
-  <ul className="friend-list">
+  <Box>
   {friends.map(({id, avatar, name, isOnline}) =>(
   <FriendList 
   key={id} 
@@ -23,7 +24,7 @@ export const FriendName = ({friends}) => {
   isOnline = {isOnline}
   /> 
       ))} 
-  </ul>
+  </Box>
 )}
 
 
