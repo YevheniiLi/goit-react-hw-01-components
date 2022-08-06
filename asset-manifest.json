@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/YevheniiLi/goit-react-hw-01-components.git/static/css/main.7acaea2f.css",
-    "main.js": "/YevheniiLi/goit-react-hw-01-components.git/static/js/main.e9def268.js",
+    "main.js": "/YevheniiLi/goit-react-hw-01-components.git/static/js/main.673ded43.js",
     "index.html": "/YevheniiLi/goit-react-hw-01-components.git/index.html",
     "main.7acaea2f.css.map": "/YevheniiLi/goit-react-hw-01-components.git/static/css/main.7acaea2f.css.map",
-    "main.e9def268.js.map": "/YevheniiLi/goit-react-hw-01-components.git/static/js/main.e9def268.js.map"
+    "main.673ded43.js.map": "/YevheniiLi/goit-react-hw-01-components.git/static/js/main.673ded43.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.e9def268.js"
+    "static/js/main.673ded43.js"
   ]
 }
