@@ -1,18 +1,20 @@
 import PropTypes  from "prop-types";
-import { Box } from "components/Box";
+// import { Box } from "components/Box";
+import { Tablet } from "./TransactionHistory.styled";
+
 export const TransactionHistory = ({items}) => {
 return (
 
-  <Box as='table'>
-    <thead> 
+  <Tablet as='table'>
+    
       <tr>
         <th>Type</th>
         <th>Amount</th>
         <th>Currency</th>
       </tr>
-    </thead>
+    
 
-      <Box as='tbody'> 
+      <tbody> 
         {items.map(item => {
           const {id, type, amount, currency} = item;
           return (
@@ -23,8 +25,8 @@ return (
           </tr>
           )
         })}
-      </Box>
-</Box>
+      </tbody>
+</Tablet>
 )}
 
 TransactionHistory.propTypes = {

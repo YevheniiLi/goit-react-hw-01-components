@@ -1,6 +1,6 @@
  import { Box } from "components/Box";
  import PropTypes  from "prop-types";
-import { SubsFooter, Name, Info, Subs,DataBase } from "./Profile.styled";
+import { SubsFooter,Name, Info, Subs, DataSub , DataBase } from "./Profile.styled";
  
 
  export const Profile = ({
@@ -15,23 +15,23 @@ import { SubsFooter, Name, Info, Subs,DataBase } from "./Profile.styled";
         width="150"
         height='150'
       />
-          <Box>
+          <Box display='inline-grid' justifyItems='center'>
             <Name>{username}</Name>
             <Info>@{tag}</Info>
             <Info>{location}</Info>
          </Box>
   
-          <SubsFooter  >
+          <SubsFooter>
             <Subs>
-              <span>Followers</span>
+              <DataSub>Followers</DataSub>
               <DataBase>{followers}</DataBase>
             </Subs>
             <Subs>
-              <span>Views</span>
+              <DataSub>Views</DataSub>
               <DataBase>{views}</DataBase>
             </Subs>
             <Subs>
-              <span>Likes</span>
+              <DataSub>Likes</DataSub>
               <DataBase>{likes}</DataBase>
             </Subs>
           </SubsFooter>

@@ -2,12 +2,19 @@ export const theme = {
   colors: {
     black: '#000',
     white: '#fff',
+    gray: '#445e66',
     text: '#2a2a2a',
     background: '#fff',
     primary: '#07c',
     secondary: '#05a',
     accent: '#609',
     muted: '#f6f6f6',
+    green: '	#008000',
+    purple: '#db4275',
+    lamp: '#ffbfa9',
+    yellow: '#ffe935',
+    lightblue: '#20d0d8',
+    tablecolor: '#00BCD5',
   },
   space: [0, 2, 4, 8, 16, 32, 64, 128, 256],
   fonts: {
@@ -24,6 +31,7 @@ export const theme = {
   },
   fontWeights: {
     normal: 400,
+    medium: 500,
     bold: 700,
   },
   lineHeights: {
@@ -36,9 +44,14 @@ export const theme = {
   },
   radii: {
     none: '0',
+    m: '2px',
     sm: '4px',
     md: '8px',
     lg: '16px',
-    round: '50%',
+    h: '50%',
   },
+
+  shadows: {
+    shadow: '0 2px 4px rgba(0, 0, 0, .25)'
+}
 };

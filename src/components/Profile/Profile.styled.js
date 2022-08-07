@@ -1,10 +1,11 @@
  import styled from "styled-components";
+// import { style } from "styled-system";
 
 
 export const Name = styled.p`
-font-weight: ${p => p.theme.fontWeights.normal};
-font-size: ${p => p.theme.fontSizes.l};
-line-height: ${p => p.theme.lineHeights.heading};
+    font-weight: ${p => p.theme.fontWeights.bold};
+    font-size: ${p => p.theme.fontSizes.m};
+    line-height: ${p => p.theme.lineHeights.headers};
 `;
 
 export const Info = styled.p `
@@ -15,12 +16,12 @@ export const Info = styled.p `
  `;
 
 export const SubsFooter = styled.footer`
-display: grid;
-grid-template-columns: repeat(3, 1fr);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 80px;
+    background-color: ${p => p.theme.colors.primary};
 
-background-color: ${p => p.theme.colors.primary};
-
-`;
+    `;
 
 
 
@@ -35,6 +36,16 @@ export const Subs = styled.li`
      
      
 `;
+
+
+export const DataSub = styled.span`
+display: flex;
+justify-content: center;
+font-weight: ${p => p.theme.fontWeights.normal};
+font-size: ${p => p.theme.fontSizes.s};
+line-height: ${p => p.theme.lineHeights.body};
+`
+
 
 
 export const DataBase = styled.span`

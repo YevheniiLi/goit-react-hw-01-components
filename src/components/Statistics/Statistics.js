@@ -1,20 +1,21 @@
 import PropTypes  from "prop-types";
 import { Box } from "components/Box";
+import {  StatsItem, Title } from "./Statistics.styled";
 
  export const Statistics = ({title, data}) => {
   return(
       
-          <Box as='section'>
-          <h2>{title}</h2>
+          <Box  as='section' bg='white' border='normal' borderRadius={5} boxShadow = 'shadows'>
+       <Title>{title}</Title> 
 
-            <Box>
+            <Box display ='grid' gridTemplateColumns='3fr 3fr 3fr 3fr 3fr'>
          {data.map(stat => {
           const {label, percentage,id} = stat;
           return (
-              <Box key={id} >
+              <StatsItem key={id} >
                   <span>{label}</span>
                   <span>{percentage}</span>
-              </Box>
+              </StatsItem>
           );
          })}
             </Box>

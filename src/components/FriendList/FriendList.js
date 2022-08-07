@@ -1,21 +1,23 @@
-import PropTypes  from "prop-types";
 import { Box } from "components/Box";
+import PropTypes  from "prop-types";
+// import { Box } from "components/Box";
+import { FriendMap , FriendData} from "./FriendList.styled";
 
 export const FriendList = ({avatar, name, isOnline}) => {
 return (
-        <Box >
-        <span>{isOnline ? 'Онлайн' : 'Офлайн'}</span>
+        <FriendData >
+        <Box>{isOnline ? "online" : "offline" }</Box>
         
         <img src={avatar} alt="User avatar" width="48" />
         <p>{name}</p>
-        </Box>
+        </FriendData>
 
          
 )};
 
 export const FriendName = ({friends}) => {
   return (
-  <Box>
+  <FriendMap>
   {friends.map(({id, avatar, name, isOnline}) =>(
   <FriendList 
   key={id} 
@@ -24,19 +26,9 @@ export const FriendName = ({friends}) => {
   isOnline = {isOnline}
   /> 
       ))} 
-  </Box>
+  </FriendMap>
 )}
 
-
-// export const FriendName = ({friends}) => {
-//   return (
-//   <ul className="friend-list">
-//   {friends.map(friend => (
-//   <ul></ul>
-//   ))}
-//   </ul>
-// );
-//   };
 
 
 
