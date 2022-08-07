@@ -1,5 +1,6 @@
  import { Box } from "components/Box";
  import PropTypes  from "prop-types";
+import { SubsFooter, Name, Info, Subs,DataBase } from "./Profile.styled";
  
 
  export const Profile = ({
@@ -7,33 +8,33 @@
   return (
     
       
-    <Box bg='grey'  alignItmes='center' border='1px solid'>
+    <Box bg='grey' display='grid' justifyItems='center'border='1px solid' borderRadius={5} >
       <img
         src={avatar}
         alt="avatar"
-        className="avatar"
         width="150"
+        height='150'
       />
           <Box>
-            <p>{username}</p>
-            <p>@{tag}</p>
-            <p>{location}</p>
+            <Name>{username}</Name>
+            <Info>@{tag}</Info>
+            <Info>{location}</Info>
          </Box>
   
-          <Box as='ul'>
-            <li>
+          <SubsFooter  >
+            <Subs>
               <span>Followers</span>
-              <span>{followers}</span>
-            </li>
-            <li>
+              <DataBase>{followers}</DataBase>
+            </Subs>
+            <Subs>
               <span>Views</span>
-              <span>{views}</span>
-            </li>
-            <li>
+              <DataBase>{views}</DataBase>
+            </Subs>
+            <Subs>
               <span>Likes</span>
-              <span>{likes}</span>
-            </li>
-          </Box>
+              <DataBase>{likes}</DataBase>
+            </Subs>
+          </SubsFooter>
     </Box>
   
   )};
