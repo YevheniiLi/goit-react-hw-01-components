@@ -38,15 +38,15 @@ export const StatsItem = styled.li`
     }
   }};
   & span {
-    color: ${p => `${p.theme.colors.light}`};
-    font-size: ${p => `${p.theme.fontSizes.m}`};
-    line-height: ${p => `${p.theme.lineHeights.body}`};
-    font-weight: ${p => `${p.theme.fontWeights.medium}`};
+    color: ${p => p.theme.colors.white};
+    font-size: ${p => p.theme.fontSizes.m};
+    line-height: ${p => p.theme.lineHeights.body};
+    font-weight: ${p => p.theme.fontWeights.medium};
   }
   & span:not(:last-child) {
-    color: ${p => `${p.theme.colors.light}`};
-    font-size: ${p => `${p.theme.fontSizes.s}`};
-    line-height: ${p => `${p.theme.lineHeights.body}`};
-    font-weight: ${p => `${p.theme.fontWeights.normal}`};
+    color: ${p => p.theme.colors.white};
+    font-size: ${p => p.theme.fontSizes.s};
+    line-height: ${p => p.theme.lineHeights.body};
+    font-weight: ${p => p.theme.fontWeights.normal};
   }
 `;

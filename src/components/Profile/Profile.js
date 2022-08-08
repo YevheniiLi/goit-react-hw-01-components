@@ -1,6 +1,6 @@
  import { Box } from "components/Box";
  import PropTypes  from "prop-types";
-import { SubsFooter,Name, Info, Subs, DataSub , DataBase } from "./Profile.styled";
+import { Data, Name, Info, SubsFooter} from "./Profile.styled";
  
 
  export const Profile = ({
@@ -8,32 +8,28 @@ import { SubsFooter,Name, Info, Subs, DataSub , DataBase } from "./Profile.style
   return (
     
       
-    <Box bg='grey' display='grid' justifyItems='center'border='1px solid' borderRadius={5} >
-      <img
-        src={avatar}
-        alt="avatar"
-        width="150"
-        height='150'
-      />
-          <Box display='inline-grid' justifyItems='center'>
-            <Name>{username}</Name>
-            <Info>@{tag}</Info>
-            <Info>{location}</Info>
-         </Box>
+    <Box  bg='profilecolor' display='grid' justifyItems='center' border='1px solid' borderRadius='4px' borderColor='lamp' >
+        <Data> 
+                <img src={avatar} alt="avatar" width="130"/>
+                <Name>{username}</Name>
+                <Info>@{tag}</Info>
+                <Info>{location}</Info>
+        </Data>
+         
   
           <SubsFooter>
-            <Subs>
-              <DataSub>Followers</DataSub>
-              <DataBase>{followers}</DataBase>
-            </Subs>
-            <Subs>
-              <DataSub>Views</DataSub>
-              <DataBase>{views}</DataBase>
-            </Subs>
-            <Subs>
-              <DataSub>Likes</DataSub>
-              <DataBase>{likes}</DataBase>
-            </Subs>
+            <li>
+              <span>Followers</span>
+              <span>{followers}</span>
+            </li>
+            <li>
+              <span>Views</span>
+              <span>{views}</span>
+            </li>
+            <li>
+              <span>Likes</span>
+              <span>{likes}</span>
+            </li>
           </SubsFooter>
     </Box>
   

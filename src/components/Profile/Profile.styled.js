@@ -1,56 +1,71 @@
  import styled from "styled-components";
 // import { style } from "styled-system";
 
+export const Data =styled.div`
+padding: ${p =>p.theme.space[4]}px;
+text-align: center;
+img {
+    width: 130px;
+    height: 130px;
+    border-radius: ${p => p.theme.radii.h};
+}
+`;
 
 export const Name = styled.p`
+    margin-top: 15px;
+    margin-bottom: 0px;
     font-weight: ${p => p.theme.fontWeights.bold};
-    font-size: ${p => p.theme.fontSizes.m};
-    line-height: ${p => p.theme.lineHeights.headers};
+    font-size: ${p => p.theme.fontSizes.ml};
+    line-height: ${p => p.theme.lineHeights.body};
+    color: ${p =>p.theme.colors.black}
+    
 `;
 
 export const Info = styled.p `
-    display: flex;
-    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-weight: ${p => p.theme.fontWeights.medium};
     font-size: ${p => p.theme.fontSizes.m};
-    font-weight: ${p => p.theme.fontWeights.normal};
+    line-height: ${p => p.theme.lineHeights.body};
+    color: ${p => p.theme.colors.gray};
  `;
 
+
+
 export const SubsFooter = styled.footer`
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 80px;
-    background-color: ${p => p.theme.colors.primary};
+    grid-template-columns: 3fr 3fr 3fr;
+    justify-content: space-evenly;
+    color: ${p =>  p.theme.colors.black};
+    margin-top: 10px;
+            li {
+                border-top: ${p =>  p.theme.borders.normal};
+                border-top-color: ${p => p.theme.colors.white};
+                border-radius:  ${p =>  p.theme.radii.m};
+                background-color: ${p =>  p.theme.colors.sub};
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 10px;
+                gap: 2px;
+                & span:not(:last-child) {
+                color: ${p => p.theme.colors.gray};
+                font-size: ${p => p.theme.fontSizes.s};
+                line-height: ${p =>  p.theme.lineHeights.body};
+                }
+                & span {
+                color: ${p => p.theme.colors.black};
+                font-size: ${p => p.theme.fontSizes.s};
+                font-weight: ${p => p.theme.fontWeights.bold};
+                line-height: ${p => p.theme.lineHeights.body};
+                }
+            }
+            & li:not(:last-child) {
+                border-right: ${p => p.theme.borders.normal};
+                color: ${p => p.theme.colors.white};
+            
+            }`;
 
-    `;
-
-
-
-export const Subs = styled.li`
-     display: grid;
-     align-items: center;
-     justify-content: center;
-     /* height: 100%; */
-     padding: ${p => p.theme.space[3]}px;
-     /* border-radius: ${p => p.theme.radii.sm}; */
-     border: ${p => p.theme.borders.normal} ;
-     
-     
-`;
-
-
-export const DataSub = styled.span`
-display: flex;
-justify-content: center;
-font-weight: ${p => p.theme.fontWeights.normal};
-font-size: ${p => p.theme.fontSizes.s};
-line-height: ${p => p.theme.lineHeights.body};
-`
-
-
-
-export const DataBase = styled.span`
-    display: inline-grid;
-    justify-content: center;
-    color: ${p => p.theme.colors.black} ;
-    font-weight: ${p => p.theme.fontWeights.bold};
-`;

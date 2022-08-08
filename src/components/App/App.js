@@ -13,10 +13,10 @@ import { Box } from 'components/Box';
 
 export const App = () => {
   return (
-    <Box as='main' display='flex'
-    alignItems='flex-start'
+    <Box as='main'display='flex'
+    alignItems='center'
     flexWrap='wrap'
-    justifyContent='space=around'>
+    justifyContent='space-evenly'>
 <ProfileName user={user} />
 <Statistics title="Upload stats"data={data}/>
 <FriendName friends ={friends}/>

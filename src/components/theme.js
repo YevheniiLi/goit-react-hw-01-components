@@ -10,11 +10,14 @@ export const theme = {
     accent: '#609',
     muted: '#f6f6f6',
     green: '	#008000',
+    red: '#bc0426',
     purple: '#db4275',
     lamp: '#ffbfa9',
     yellow: '#ffe935',
     lightblue: '#20d0d8',
     tablecolor: '#00BCD5',
+    sub: '#e4d8ed',
+    profilecolor: '#f8efed'
   },
   space: [0, 2, 4, 8, 16, 32, 64, 128, 256],
   fonts: {

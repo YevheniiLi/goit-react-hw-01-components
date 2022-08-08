@@ -5,7 +5,7 @@ import {  StatsItem, Title } from "./Statistics.styled";
  export const Statistics = ({title, data}) => {
   return(
       
-          <Box  as='section' bg='white' border='normal' borderRadius={5} boxShadow = 'shadows'>
+          <Box  as='section' bg='profilecolor' border='1px solid' borderRadius='4px' borderColor='lamp' >
        <Title>{title}</Title> 
 
             <Box display ='grid' gridTemplateColumns='3fr 3fr 3fr 3fr 3fr'>
