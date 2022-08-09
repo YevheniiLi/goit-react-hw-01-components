@@ -3,8 +3,7 @@
 import { Data, Name, Info, SubsFooter} from "./Profile.styled";
  
 
- export const Profile = ({
-  username, tag, location, avatar, stats, followers, views, likes}) => {
+ export const Profile = ({ profileData: {username, tag, location, avatar, stats: {followers, views, likes}}}) => {
   return (
     
       
@@ -35,32 +34,14 @@ import { Data, Name, Info, SubsFooter} from "./Profile.styled";
   
   )};
 
-
-  export const ProfileName =({user}) => {
-    return (
-  <Profile
-  username={user.username}
-  tag={user.tag}
-  location={user.location}
-  avatar={user.avatar}
-  stats={user.stats}
-  followers={user.stats.followers}
-  views={user.stats.views}
-  likes={user.stats.likes}
-/>
-    )};
-
-
-
-
-ProfileName.propTypes = {
-  user: PropTypes.exact ({
+Profile.propTypes = {
+  profileData: PropTypes.shape ({
     username: PropTypes.string,
     tag: PropTypes.string,
     location: PropTypes.string,
     avatar: PropTypes.string,
 
-    stats: PropTypes.exact ({
+    stats: PropTypes.shape ({
     followers: PropTypes.number,
     views: PropTypes.number,
     likes: PropTypes.number, 

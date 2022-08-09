@@ -6,7 +6,7 @@ import {  StatsItem, Title } from "./Statistics.styled";
   return(
       
           <Box  as='section' bg='profilecolor' border='1px solid' borderRadius='4px' borderColor='lamp' >
-       <Title>{title}</Title> 
+                  {title  && <Title>{title}</Title> } 
 
             <Box display ='grid' gridTemplateColumns='3fr 3fr 3fr 3fr 3fr'>
          {data.map(stat => {
@@ -24,8 +24,9 @@ import {  StatsItem, Title } from "./Statistics.styled";
 };
 
 Statistics.propTypes = {
+    title: PropTypes.string.isRequired,
     data: PropTypes.arrayOf(
-        PropTypes.exact ({
+        PropTypes.shape ({
             label: PropTypes.string,
             percentage: PropTypes.number,
             id: PropTypes.string,

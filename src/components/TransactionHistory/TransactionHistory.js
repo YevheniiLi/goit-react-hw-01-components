@@ -31,7 +31,7 @@ return (
 
 TransactionHistory.propTypes = {
   items: PropTypes.arrayOf (
-    PropTypes.exact ({ 
+    PropTypes.shape ({ 
       id: PropTypes.string,
       type: PropTypes.string,
       amount: PropTypes.string,
