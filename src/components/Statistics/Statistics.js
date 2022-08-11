@@ -24,7 +24,7 @@ import {  StatsItem, Title } from "./Statistics.styled";
 };
 
 Statistics.propTypes = {
-    title: PropTypes.string.isRequired,
+    title: PropTypes.string,
     data: PropTypes.arrayOf(
         PropTypes.shape ({
             label: PropTypes.string,

@@ -3,7 +3,7 @@
 import { Data, Name, Info, SubsFooter} from "./Profile.styled";
  
 
- export const Profile = ({ profileData: {username, tag, location, avatar, stats: {followers, views, likes}}}) => {
+ export const Profile = ({ user: {username, tag, location, avatar, stats: {followers, views, likes}}}) => {
   return (
     
       
@@ -35,7 +35,7 @@ import { Data, Name, Info, SubsFooter} from "./Profile.styled";
   )};
 
 Profile.propTypes = {
-  profileData: PropTypes.shape ({
+  user: PropTypes.shape ({
     username: PropTypes.string,
     tag: PropTypes.string,
     location: PropTypes.string,

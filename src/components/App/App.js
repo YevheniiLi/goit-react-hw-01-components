@@ -17,7 +17,13 @@ export const App = () => {
     alignItems='center'
     flexWrap='wrap'
     justifyContent='space-evenly'>
-<Profile profileData={user} />
+<Profile user={user} 
+      username={user.username}
+      tag={user.tag}
+      location={user.location}
+      avatar={user.avatar}
+      stats={user.stats} />
+
 <Statistics title="Upload stats"data={data}/>
 <FriendList friends={friends}/>
 <TransactionHistory items={transactions} />
